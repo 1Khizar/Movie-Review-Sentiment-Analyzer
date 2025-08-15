@@ -475,7 +475,6 @@ if model is not None and vectorizer is not None:
                 st.plotly_chart(fig_hist, use_container_width=True)
 
     # History section
-# History section with improved styling and Delete All button
 if st.session_state.analysis_history:
     st.markdown("---")
     with st.expander("📚 Recent Analysis History", expanded=False):
@@ -522,33 +521,6 @@ if st.session_state.analysis_history:
             st.success("✅ History cleared!")
             st.rerun()
 
-# Sidebar for additional features
-with st.sidebar:
-    st.markdown("### 🔧 Features")
-    st.markdown("""
-    ✅ **Real-time sentiment analysis**
-    
-    ✅ **Confidence scoring**
-    
-    ✅ **Analysis history tracking**
-    
-    ✅ **Interactive visualizations**
-    
-    ✅ **Sample reviews to try**
-    
-    ✅ **Statistics dashboard**
-    """)
-    
-    st.markdown("---")
-    st.markdown("### 📖 How to Use")
-    st.markdown("""
-    1. **Enter** your movie review in the text area
-    2. **Click** 'Analyze Sentiment' button
-    3. **View** the sentiment result and confidence score
-    4. **Check** your statistics and history below
-    5. **Try** sample reviews for quick testing
-    """)
-    
     st.markdown("---")
     if st.button("🗑️ Clear All History"):
         st.session_state.analysis_history = []
