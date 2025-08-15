@@ -509,18 +509,7 @@ if st.session_state.analysis_history:
             
             """, unsafe_allow_html=True)
             
-                # Delete all button
-    if st.button("🗑️ Delete All History"):
-            st.session_state.analysis_history = []
-            st.session_state.stats = {
-                'total': 0,
-                'positive': 0,
-                'negative': 0,
-                'total_confidence': 0
-            }
-            st.success("✅ History cleared!")
-            st.rerun()
-
+    #Clear all history
     st.markdown("---")
     if st.button("🗑️ Clear All History"):
         st.session_state.analysis_history = []
