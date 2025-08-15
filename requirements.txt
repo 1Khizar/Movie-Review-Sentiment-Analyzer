@@ -2,3 +2,4 @@ nltk
 streamlit
 pandas
 plotly
+sklearn
