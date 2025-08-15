@@ -12,10 +12,10 @@ import pandas as pd
 @st.cache_data
 def download_nltk_data():
     try:
-        nltk.download('punkt')
-        nltk.download('stopwords')
-        nltk.download('wordnet')
-        nltk.download('averaged_perceptron_tagger')
+        nltk.download('punkt', quiet=True)
+        nltk.download('stopwords', quiet=True)
+        nltk.download('wordnet', quiet=True)
+        nltk.download('averaged_perceptron_tagger', quiet=True)
     except:
         pass
 
