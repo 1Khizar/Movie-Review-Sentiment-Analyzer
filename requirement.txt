@@ -1,4 +1,4 @@
+nltk
 streamlit
 pandas
-nltk
 plotly

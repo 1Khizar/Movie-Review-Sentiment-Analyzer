@@ -1,20 +1,3 @@
-# Automatically install missing packages
-import subprocess
-import sys
-
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-# List of required packages
-required_packages = ["nltk", "plotly", "pandas"]
-
-for pkg in required_packages:
-    try:
-        __import__(pkg)
-    except ImportError:
-        install(pkg)
-
-
 import streamlit as st
 import pickle
 import re
