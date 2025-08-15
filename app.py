@@ -217,8 +217,10 @@ button[kind="secondary"] {
 @st.cache_resource
 def load_model():
     try:
-        model = pickle.load(open('model.pkl', 'rb'))
-        vectorizer = pickle.load(open('count_vectorizer.pkl', 'rb'))
+        with open('model.pkl', 'rb') as f:
+            model = pickle.load(f)
+        with open('count_vectorizer.pkl', 'rb') as f:
+            vectorizer = pickle.load(f)
         return model, vectorizer
     except FileNotFoundError:
         st.error("⚠️ Model files not found! Please ensure 'model.pkl' and 'count_vectorizer.pkl' are in the same directory.")
